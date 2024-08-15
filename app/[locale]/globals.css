@@ -68,8 +68,13 @@
     scrollbar-color: var(--primary);
   }
 
+  html,
   body {
-    @apply bg-background text-foreground;
+    @apply h-full m-0 p-0 overflow-x-hidden !important;
+  }
+
+  body {
+    @apply bg-background text-foreground box-border flex flex-col;
   }
 
   .blurred-bg {

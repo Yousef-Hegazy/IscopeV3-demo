@@ -44,7 +44,7 @@ const VerticalNavItem = ({ item, isChild, index }: { item: NavObject; isChild?: 
       </AccordionContent>
     </AccordionItem>
   ) : (
-    <Link href={route as unknown as UrlObject} locale={locale} replace={true}>
+    <Link href={route as unknown as UrlObject} locale={locale}>
       <div
         className={`flex flex-row gap-2 items-center justify-start hover:bg-primary/20 px-3 py-2 rounded-lg transition-all ${
           selected ? "bg-primary/20 text-primary font-bold" : "text-foreground font-normal"

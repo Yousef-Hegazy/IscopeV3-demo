@@ -9,7 +9,7 @@ import ThemeSettings from "./ThemeSettings";
 
 const LayoutComponents = () => {
   return (
-    <div className="shadow-lg sticky top-0">
+    <div className="shadow-md sticky top-0 z-50 bg-background/70 backdrop-blur-lg">
       <div className="flex flex-row items-center justify-between px-4 py-2">
         <Sidebar />
 
