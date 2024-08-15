@@ -64,9 +64,19 @@
 @layer base {
   * {
     @apply border-border;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary);
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  .blurred-bg {
+    @apply bg-background/5 backdrop-blur-sm !important;
+  }
+
+  .primary-bg {
+    @apply bg-primary text-primary-foreground transition-colors !important;
   }
 }

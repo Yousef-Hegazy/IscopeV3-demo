@@ -14,7 +14,7 @@ const AppTooltip = ({
     <TooltipProvider>
       <Tooltip delayDuration={100}>
         <TooltipTrigger asChild>{children}</TooltipTrigger>
-        <TooltipContent className="bg-background/50 backdrop-blur-sm opacity-100">
+        <TooltipContent className="bg-background/50 backdrop-blur-md opacity-100">
           <div className={`text-base font-semibold ${titleClasses}`}>{title}</div>
         </TooltipContent>
       </Tooltip>

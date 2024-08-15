@@ -1,26 +1,34 @@
 import Icon from "../Icon";
 import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
 import ModeDropdown from "./ModeDropdown";
+import HorizontalNavbar from "./HorizontalNavbar";
 import NavbarAvatar from "./NavbarAvatar";
 import Sidebar from "./Sidebar";
 import ThemeSettings from "./ThemeSettings";
 
 const LayoutComponents = () => {
   return (
-    <div className="flex flex-row items-center justify-between px-4 py-3 shadow-lg sticky top-0">
-      <div className="flex flex-row items-center justify-start gap-3">
-        <NavbarAvatar />
+    <div className="shadow-lg sticky top-0">
+      <div className="flex flex-row items-center justify-between px-4 py-2">
+        <Sidebar />
 
-        <Button variant="outline" size="icon">
-          <Icon icon="bell-alert" />
-        </Button>
+        <div className="flex flex-row items-center justify-start gap-3">
+          <ThemeSettings />
 
-        <ModeDropdown />
+          <ModeDropdown />
 
-        <ThemeSettings />
+          <Button variant="outline" size="icon">
+            <Icon icon="bell-alert" />
+          </Button>
+
+          <NavbarAvatar />
+        </div>
       </div>
 
-      <Sidebar />
+      <Separator />
+
+      <HorizontalNavbar />
     </div>
   );
 };

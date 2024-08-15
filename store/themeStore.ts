@@ -711,17 +711,21 @@ export type RadiusType = keyof typeof radius;
 export interface ThemeState {
   color: ColorType;
   radius: RadiusType;
+  isSidebar: boolean;
 }
 export interface ThemeActions {
   setColor: (color: ColorType) => void;
   setRadius: (radius: RadiusType) => void;
+  setIsSidebar: (val: boolean) => void;
 }
 
 const themeState: StateCreator<ThemeState & ThemeActions> = (set) => ({
   color: "violet",
   radius: 1,
+  isSidebar: true,
   setColor: (color) => set({ color }),
   setRadius: (radius) => set({ radius }),
+  setIsSidebar: (isSidebar) => set({ isSidebar }),
 });
 
 const useThemeSettings = create<ThemeState & ThemeActions>()(

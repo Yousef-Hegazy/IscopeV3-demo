@@ -14,9 +14,11 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { memo, useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const ModeDropdown = memo(() => {
   const { theme, setTheme } = useTheme();
+  const t = useTranslations();
 
   const [mounted, setMounted] = useState(false);
 
@@ -36,27 +38,27 @@ const ModeDropdown = memo(() => {
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent>
-        <DropdownMenuLabel className="text-center text-lg">الوضع</DropdownMenuLabel>
+      <DropdownMenuContent className="blurred-bg">
+        <DropdownMenuLabel className="text-center text-lg">{t("settings.themeMode")}</DropdownMenuLabel>
 
         <DropdownMenuSeparator />
 
         <DropdownMenuGroup>
           <DropdownMenuItem onClick={() => setTheme("light")} className="gap-2 cursor-pointer px-4 font-semibold">
             <Icon icon="light-theme" />
-            <span>الصباحي</span>
+            <span>{t("settings.modes.light")}</span>
           </DropdownMenuItem>
 
           <DropdownMenuItem onClick={() => setTheme("dark")} className="gap-2 cursor-pointer px-4 font-semibold">
             <Icon icon="dark-theme" />
-            <span>الليلي</span>
+            <span>{t("settings.modes.dark")}</span>
           </DropdownMenuItem>
 
           <DropdownMenuSeparator />
 
           <DropdownMenuItem onClick={() => setTheme("system")} className="gap-2 cursor-pointer px-4 font-semibold">
             <Icon icon="system-theme" />
-            <span>النظام</span>
+            <span>{t("settings.modes.system")}</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>

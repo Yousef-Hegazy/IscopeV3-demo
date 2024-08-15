@@ -1,0 +1,43 @@
+{
+    "title": "Iscope",
+    "settings": {
+        "title": "Theme Settings",
+        "color": "Color",
+        "radius": "Radius",
+        "themeMode": "Mode",
+        "colors": {
+            "zinc": "Zinc",
+            "red": "Red",
+            "rose": "Rose",
+            "orange": "Orange",
+            "green": "Green",
+            "blue": "Blue",
+            "yellow": "Yellow",
+            "violet": "Violet"
+        },
+        "language": "Language",
+        "layout": "Layout",
+        "modes": {
+            "light": "Light",
+            "dark": "Dark",
+            "system": "System"
+        }
+    },
+    "account": {
+        "title": "Account",
+        "settings": "Account Settings",
+        "profile": "Profile",
+        "logout": "Log Out"
+    },
+    "admin": "Admin",
+    "users": {
+        "title": "Security and Users",
+        "management": "User Management",
+        "settings": "Users Settings"
+    },
+    "dead": {
+        "title": "Dead",
+        "list": "Dead Records"
+    },
+    "mainPage": "Main Page"
+}
