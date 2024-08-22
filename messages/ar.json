@@ -7,6 +7,10 @@
         "themeMode": "الوضع",
         "colors": {
             "zinc": "الزنك",
+            "gray": "الرمادي",
+            "slate": "الأردواز",
+            "stone": "الحجري",
+            "neutral": "المحايد",
             "red": "الأحمر",
             "rose": "الزهري",
             "orange": "البرتقالي",
@@ -18,8 +22,8 @@
         "language": "اللغة",
         "layout": "التصميم",
         "modes": {
-            "light": "النهاري",
-            "dark": "الليلي",
+            "light": "الفاتح",
+            "dark": "الداكن",
             "system": "النظام"
         }
     },
@@ -39,5 +43,21 @@
         "title": "المتوفين",
         "list": "سجلات المتوفين"
     },
-    "mainPage": "الصفحة الرئيسية"
+    "mainPage": "الصفحة الرئيسية",
+    "notifications": "الاشعارات",
+    "messages": "الرسائل",
+    "tasks": "المهام",
+    "workOrderReport": "محضر انجاز امر عمل",
+    "saudiArabiaProject": "مشروع السعودية الرياض المنطقة الأولى",
+    "approveStudy": "طلب اعتماد دراسة مشروع",
+    "addProject": "اضافة مشروع",
+    "addContractor": "اضافة مقاول",
+    "addBiTask": "اضافة مهمة ذكاء اعمال",
+    "announceCompetition": "اضافة اعلان منافسة",
+    "studies": "الدراسات",
+    "projects": "المشاريع",
+    "relatedParties": "الجهات ذات العلاقة",
+    "announcementsAndCompetitions": "الاعلانات والمنافسات",
+    "transactions": "المعاملات",
+    "reports": "التقارير"
 }

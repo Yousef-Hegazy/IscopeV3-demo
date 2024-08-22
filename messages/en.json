@@ -7,6 +7,10 @@
         "themeMode": "Mode",
         "colors": {
             "zinc": "Zinc",
+            "gray": "Gray",
+            "slate": "Slate",
+            "stone": "Stone",
+            "neutral": "Neutral",
             "red": "Red",
             "rose": "Rose",
             "orange": "Orange",
@@ -39,5 +43,21 @@
         "title": "Dead",
         "list": "Dead Records"
     },
-    "mainPage": "Main Page"
+    "mainPage": "Main Page",
+    "notifications": "Notifications",
+    "messages": "Messages",
+    "tasks": "Tasks",
+    "workOrderReport": "Work Order Completion Report",
+    "saudiArabiaProject": "Saudi Arabia Project, Riyadh, First Dist.",
+    "approveStudy": "Request for approval of a study",
+    "addProject": "Add a project",
+    "addContractor": "Add a contractor",
+    "addBiTask": "Add a BI task",
+    "announceCompetition": "Add a competition",
+    "studies": "Studies",
+    "projects": "Projects",
+    "relatedParties": "Related Parties",
+    "announcementsAndCompetitions": "Advertisements and Competitions",
+    "transactions": "Transactions",
+    "reports": "Reports"
 }

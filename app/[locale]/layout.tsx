@@ -41,7 +41,12 @@ const RootLayout = async ({ children, params: { locale } }: Readonly<RootLayoutP
     <Providers>
       <html lang={locale} dir={localeDir[locale]} suppressHydrationWarning>
         <head />
-        <body className={cn("relative bg-background font-sans antialiased", inter.variable)}>
+        <body
+          className={cn(
+            "bg-background font-sans antialiased selection:bg-primary/20 overflow-y-hidden",
+            inter.variable
+          )}
+        >
           <NextIntlClientProvider locale={locale} messages={messages}>
             <ThemeProvider>
               <SVGs />

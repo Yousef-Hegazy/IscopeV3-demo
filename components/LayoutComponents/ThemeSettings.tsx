@@ -4,6 +4,7 @@ import { useDirection } from "@radix-ui/react-direction";
 import { useEffect, useState } from "react";
 
 import useThemeSettings, { radius, RadiusType, themes } from "@/store/themeStore";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import AppTooltip from "../AppTooltip";
@@ -11,7 +12,6 @@ import Icon from "../Icon";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { useTranslations } from "next-intl";
 
 const LocaleSwitcher = () => {
   const [locale, setLocale] = useState("ar");
@@ -63,22 +63,11 @@ const ThemeSettings = () => {
   };
 
   useEffect(() => {
-    const themeVars = themes[selectedColor];
-    const rootVars = themeVars.root;
-    const darkVars = themeVars.dark;
-    const root = document.documentElement;
+    const root = document.querySelector("html");
 
-    if (resolvedTheme === "dark") {
-      for (const [key, val] of Object.entries(darkVars)) {
-        root.style.setProperty(`--${key}`, val);
-      }
-    } else {
-      for (const [key, val] of Object.entries(rootVars)) {
-        root.style.setProperty(`--${key}`, val);
-      }
-    }
-    root.style.setProperty("--radius", radius[selectedRadius]);
-  }, [selectedColor, selectedRadius, resolvedTheme]);
+    root?.setAttribute("data-color", selectedColor as string);
+    root?.setAttribute("data-radius", selectedRadius.toString());
+  }, [selectedColor, selectedRadius]);
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
