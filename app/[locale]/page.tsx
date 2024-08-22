@@ -2,10 +2,17 @@ import DashboardTabs from "@/components/DashboardComponents/DashboardTabs";
 import Icon from "@/components/Icon";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { getTranslations } from "next-intl/server";
+import { locales } from "@/i18n";
+import { useTranslations } from "next-intl";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default async function Home() {
-  const t = await getTranslations();
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default function Home({ params: { locale } }: { params: { locale: string } }) {
+  unstable_setRequestLocale(locale);
+  const t = useTranslations();
 
   return (
     <div className="relative items-start w-full h-full bg-background text-foreground">
